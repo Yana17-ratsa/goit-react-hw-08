@@ -2,7 +2,6 @@
 // import SearchBox from '../SearchBox/SearchBox';
 // import ContactList from '../ContactList/ContactList';
 // import css from './App.module.css';
-// import { useDispatch, useSelector } from 'react-redux';
 import {
   lazy,
   Suspense,

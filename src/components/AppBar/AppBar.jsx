@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 function AppBar() {
-  const isLoggedIn = useSelector(selectIsLoggedInedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <header>
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
       <Navigation />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
 }

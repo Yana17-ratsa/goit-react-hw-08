@@ -9,6 +9,7 @@ import {
 } from 'react';
 import Layout from '../Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
+import AppBar from '../AppBar/AppBar';
 // import { fetchContacts } from '../../redux/contacts/operations';
 // import {
 //   selectContacts,
@@ -47,16 +48,19 @@ function App() {
   //   </div>
   // );
 
+return (
   <Layout>
-    <Suspense fallback={null}>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/register' element={<RegisterPage />} />
-        <Route path='/login' element={<LogInPage />} />
-        <Route path='/contacts' element={<ContactsPage />} />
-      </Routes>
-    </Suspense>
-  </Layout>;
+  <Suspense fallback={null}>
+    <Routes>
+      <Route path='*' element={<AppBar/>}/>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/register' element={<RegisterPage />} />
+      <Route path='/login' element={<LogInPage />} />
+      <Route path='/contacts' element={<ContactsPage />} />
+    </Routes>
+  </Suspense>
+</Layout>
+)
 }
 
 export default App;

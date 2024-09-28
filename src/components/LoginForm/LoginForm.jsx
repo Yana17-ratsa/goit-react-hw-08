@@ -18,7 +18,6 @@ function LoginForm() {
       onSubmit={handleSubmit}
     >
       <Form autoComplete='off'>
-        <Field>
           <label>
             Email
             <Field type='email' name='email' />
@@ -28,7 +27,6 @@ function LoginForm() {
             <Field type='password' name='password' />
           </label>
           <button type='submit'>Login</button>
-        </Field>
       </Form>
     </Formik>
   );
